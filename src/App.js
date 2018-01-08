@@ -20,7 +20,8 @@ class App extends Component {
         cWeather: response.body.main.temp - 273.15,
         currentWeather: (response.body.main.temp *9/5) - 459.67,
         celcius: false,
-        status: response.body.weather[0].description
+        status: response.body.weather[0].description,
+        city: this.state.city
       });
     });
   }
@@ -64,7 +65,8 @@ class App extends Component {
         cWeather: response.body.main.temp - 273.15,
         currentWeather: (response.body.main.temp *9/5) - 459.67,
         celcius: false,
-        status: response.body.weather[0].description
+        status: response.body.weather[0].description,
+        city: this.state.city
       });
     });
   }
@@ -80,6 +82,7 @@ class App extends Component {
         </form>
         <p onClick={this.showWeather}>{this.state.currentWeather} </p>
         <p>{this.state.status}</p>
+        <p>{this.state.city}</p>
         
               
       </div>
